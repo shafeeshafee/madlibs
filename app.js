@@ -1,4 +1,3 @@
-
 const madlibs = () => {
     const selectStory = prompt('Would you like Story One or Story Two?').toLowerCase();
 
@@ -54,7 +53,14 @@ const madlibs = () => {
     }
     else {
         alert("Enter a valid story");
+        madlibs();
     }
+
+    // reloads the document on click of "Play Again?"
+    const replay = document.querySelector("#replay");
+    replay.addEventListener("click", () => {
+        location.reload();
+    })
 }
 
 madlibs();
