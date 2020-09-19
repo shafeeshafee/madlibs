@@ -56,3 +56,5 @@ const madlibs = () => {
         alert("Enter a valid story");
     }
 }
+
+madlibs();
