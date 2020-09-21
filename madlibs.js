@@ -45,22 +45,10 @@ const madlibs = () => {
         console.log(`Today we took a ${adjective} fieldtrip to ${famousPlace}. They're famous for making ${pluralNoun} and for cooking ${adjectiveTwo} ${food}. Eating all that food made me feel ${emotion}. Next we enjoyed the local tradition of ${ingVerb} in the middle of the ${commonPlace}! Finally, we went shopping for souvenirs. I bought a ${adjectiveThree} ${noun} for myself, and a ${adjectiveFour} ${anotherNoun} for my favorite ${familyMember}. I'll definitely never forget this ${adjectiveFive} trip!`);
     }
 
-    if (selectStory == "one" || selectStory === "1") {
-        storyOne();
-    }
-    else if (selectStory == "two" || selectStory === "2") {
-        storyTwo();
-    }
-    else {
-        alert("Enter a valid story");
-        madlibs();
-    }
-
-    // reloads the document on click of "Play Again?"
-    const replay = document.querySelector("#replay");
-    replay.addEventListener("click", () => {
-        location.reload();
-    })
+    // player selection - used ternary operator for practice
+    (selectStory == "one" || selectStory === "1") ? storyOne() :
+        (selectStory == "two" || selectStory === "2") ? storyTwo() :
+            (alert("Enter a valid story"), madlibs());
 }
 
 madlibs();
